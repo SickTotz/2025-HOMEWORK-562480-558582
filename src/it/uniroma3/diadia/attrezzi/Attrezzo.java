@@ -31,10 +31,6 @@ public class Attrezzo {
 	 * @return il nome identificatore dell'attrezzo
 	 */
 	public String getNome() {
-		if((this.nome)==null) {
-			this.nome="Nessun attrezzo";
-			}
-
 		return this.nome;
 	}
 

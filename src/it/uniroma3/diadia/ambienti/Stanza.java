@@ -160,11 +160,13 @@ public class Stanza {
 		Attrezzo attrezzoCercato;
 		attrezzoCercato = null;
 		for (Attrezzo attrezzo : this.attrezzi) {
-			if (attrezzo.getNome().equals(nomeAttrezzo))
-				attrezzoCercato = attrezzo;
+			if(attrezzo != null)
+				if (attrezzo.getNome().equals(nomeAttrezzo))
+					attrezzoCercato = attrezzo;
 		}
 		return attrezzoCercato;	
 	}
+
 
 	/**
 	 * Rimuove un attrezzo dalla stanza (ricerca in base al nome).
@@ -189,7 +191,9 @@ public class Stanza {
 		else
 			return false;
 	}
-
+	public int getNumeroAttrezziPossibili() {
+		return NUMERO_MASSIMO_ATTREZZI-this.numeroAttrezzi;
+	}
 
 	public String[] getDirezioni() {
 		String[] direzioni = new String[this.numeroStanzeAdiacenti];

@@ -67,6 +67,13 @@ public class Borsa {
 		}
 		return a;
 	}
+	
+	public boolean getSpazioDisponibile(Attrezzo a) {
+		if(a != null && this.getPesoMax()-this.getPeso()>=a.getPeso())
+			return true;
+		return false; 
+	}
+	
 	public String toString() {
 		StringBuilder s = new StringBuilder();
 
